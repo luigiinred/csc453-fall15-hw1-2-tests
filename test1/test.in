@@ -5,7 +5,7 @@ this is some text in the head
 
 <body>
 
-some text <i>in the </i>
+some text <i>in the </i> 
 
 <b>body
 </b>
@@ -18,7 +18,7 @@ some text <i>in the </i>
       </li>
     </ol>
   </li>
-
+  
   <li>
     item 2
   </li>
