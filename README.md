@@ -13,3 +13,6 @@ Add this command for myhtml2txt:
 ```
 
 Your output and the output of diff will be saved into each test's directory.
+
+
+Part 2's myhtml2txt executable is not up yet. I will generate failing tests once I get that.  
