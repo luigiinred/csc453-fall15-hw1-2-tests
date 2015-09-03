@@ -2,7 +2,7 @@
 
 for d in */ ; do
     echo -e "\n\n\n\n============================== $d =============================="
-    ../myhtml2txt < $d/test.in > $d/out.txt
+    ../myhtml2txt < $d/test.in > $d/out.txt 2> $d/err.out
     diff -c $d/out.txt $d/test.out >$d/diff.out 2>&1
     if [ $? -eq 0 ]
     then
