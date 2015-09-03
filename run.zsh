@@ -1,15 +1,29 @@
 #!/bin/bash
 
 for d in */ ; do
-    echo -e "\n\n\n\n============================== $d =============================="
+    echo -e "\n\n\n============================== $d =============================="
+
     ../myhtml2txt < $d/test.in > $d/out.txt 2> $d/err.out
-    diff -c $d/out.txt $d/test.out >$d/diff.out 2>&1
-    if [ $? -eq 0 ]
+
+    if [ -f $d/test.err ] && [ $?  -eq 0  ];
     then
-        echo "$d Passed"
+      diff -c $d/err.out $d/test.err >$d/diff.out 2>&1
+      if [ $? -eq 0 ]
+      then
+          echo "$d Passed"
+      else
+          echo -e "$d Failed\n"
+          cat $d/diff.out
+      fi
     else
-        echo -e "$d Failed\n"
-        cat $d/diff.out
+      diff -c $d/out.txt $d/test.out >$d/diff.out 2>&1
+      if [ $? -eq 0 ]
+      then
+          echo "$d Passed"
+      else
+          echo -e "$d Failed\n"
+          cat $d/diff.out
+      fi
     fi
 
 done
