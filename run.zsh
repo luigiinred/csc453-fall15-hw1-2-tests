@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for d in */ ; do
-    echo -e "\n\n\n============================== $d =============================="
+    echo -e "\n\n============ $d ============"
 
     ../myhtml2txt < $d/test.in > $d/out.txt 2> $d/err.out
 

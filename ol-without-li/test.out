@@ -6,7 +6,7 @@ this is some text in the head
 
 
 some text in the 
-<p> Hello world</p>
+
 body
 
 
@@ -14,16 +14,4 @@ body
   
     
       
-        item 1
-      
-    
-  
-
-  
-    item 2
-  
-
-
-
-
-
+        
